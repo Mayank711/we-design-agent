@@ -58,3 +58,25 @@ foundations, DM Sans styles, and the banner/map/trip-icon assets; deliberate Lan
 | `13:294` | **C — Midnight Premium** | **Black header**, white sheet pulled up with the signature 24px top radius, banner as rounded in-flow card, **yellow CTA** (#F9CD29, from the 30-mins brand art), black Book pills, yellow nav indicator | CTA/indicator yellow #F9CD29 |
 
 Adherence scan: all concepts clean apart from the flagged Lane-2 paints + logo-placeholder orange.
+
+### Concept rework (same day) — full-theme commitment
+
+User feedback: recoloring the top band is not a redesign, and the baked "30 mins" banner PNG
+(sky/clouds/teal truck) clashed with every non-sky theme. Each concept was reworked so the ENTIRE
+screen carries its theme, and the banner art is now **native per theme** (the PNG asset remains
+only in the two reference frames):
+
+- **A — Sky Story** (`13:2`): banner PNG dropped; the promo is typeset natively on the gradient
+  ("BOOK TRUCKS IN / 30 MINS" in brand yellow + white truck glyph + soft cloud ellipses); white
+  content sheet pulled up with the 24px signature radius. Height 1520.
+- **B — Swift Utility** (`13:148`): banner replaced by a **3-tile stats row** (30 min / 1L+ / 19K+);
+  map card compacted (left title + "Map ›" link, 120px map, no explore row); Book actions are blue
+  text links; footer compressed to one line. Height 1345 — a visibly denser screen.
+- **C — Midnight Premium** (`13:294`): **full dark mode** — dark sheet + dark cards (#141416 /
+  #1B1B1D / #232327 / #2C2C31 exploratory dark-surface set, flagged for adoption), dark location
+  box, native dark promo card (yellow-outline, yellow truck), map dimmed with a 45% dark overlay and
+  dark pin chips, yellow-outline Book pills, dark bottom nav with yellow active state. Height 1605.
+
+New skill rule candidate (encoded in /screen-iterate future edits): **a theme concept must restyle
+every band of the screen — background system, cards, illustration/banner treatment, list rows,
+footer, and nav — and baked raster art may only be reused in themes that match its baked palette.**
