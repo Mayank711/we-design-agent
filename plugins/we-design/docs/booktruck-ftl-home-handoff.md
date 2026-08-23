@@ -45,3 +45,16 @@ section *OD*, home frame `6972:243481` (360×1600).
   demands a Full seat for MCP edits on files we don't own; our clone-the-page step was therefore
   executed as a faithful in-sandbox duplicate of the home frame).
 - Only the home page reproduced/redesigned; no other screens touched.
+
+## Concept exploration (user-facing directions, added 2026-08-24)
+
+Three creative rewrites built NEXT TO the reference frames (nothing removed). All reuse the
+foundations, DM Sans styles, and the banner/map/trip-icon assets; deliberate Lane-2 items listed.
+
+| Node | Concept | Direction | Lane-2 items |
+|---|---|---|---|
+| `13:2` | **A — Sky Story** | Deep-blue→sky gradient hero, white header text, translucent call/toggle, floating radius-24 booking card with **blue CTA**, horizontal **trip-card carousel** ("Book again") | header gradient (#176E9C→#2495CC→#9DD9EE) |
+| `13:148` | **B — Swift Utility** | White header + **underline tabs**, grey `Greys/Background` canvas, bordered (not floating) cards, banner art swapped for a slim `Status/Light yellow` **"Book trucks in 30 mins" strip**, white grouped trips band, black active nav | bolt glyph #B8860B |
+| `13:294` | **C — Midnight Premium** | **Black header**, white sheet pulled up with the signature 24px top radius, banner as rounded in-flow card, **yellow CTA** (#F9CD29, from the 30-mins brand art), black Book pills, yellow nav indicator | CTA/indicator yellow #F9CD29 |
+
+Adherence scan: all concepts clean apart from the flagged Lane-2 paints + logo-placeholder orange.
