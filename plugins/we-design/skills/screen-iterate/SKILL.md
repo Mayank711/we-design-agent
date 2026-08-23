@@ -56,6 +56,18 @@ font — Hindi/Kannada → Poppins/Baloo Devanagari), **real icon components**, 
   faithful. A screen can contain every element and still fail (inflated spacing = the grey-area bug).
 - Iterate until it matches *before* changing anything.
 
+### Theme-concept rule (v0.7.1, user-flagged on BookTruck FTL concepts)
+When the requested change is a **theme/visual-direction concept** (not a cleanup), a recolored
+header is NOT a concept. The theme must be carried through **every band of the screen**: background
+system, card surfaces, inner boxes, illustration/banner treatment, list rows, separators, link/button
+styles, footer, and bottom nav. Two hard sub-rules:
+1. **Baked raster art may only be reused in themes that match its baked palette.** Art with a baked
+   sky/background drags every other theme back to the original look — rebuild the same message
+   natively in the theme's language (typeset headline + simple glyphs), or re-crop/re-export art
+   that fits.
+2. Before calling a concept done, diff it against the base screen band-by-band and count the bands
+   that actually changed — if most bands are untouched, it is a recolor, not a concept.
+
 ### Phase D — Apply the requested change
 Make the change (cleanup / restructure / festival) as a deliberate diff on the faithful base. Keep a
 **decision log**: what changed, what stayed, and why. (Cleanups: consolidate, don't silently delete —
