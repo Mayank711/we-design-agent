@@ -1,0 +1,103 @@
+/* ============================================================
+   WheelsEye Loads — Color tokens
+   Derived from caraxes/app/themeUtils/colors.ts
+   ============================================================ */
+:root {
+  /* ---- Brand greens (primary action, success, loading point) ---- */
+  --we-green-primary: #2ea750;   /* primary buttons, loading-point dot, success */
+  --we-green-secondary: #62b146;
+  --we-green-600: #248e28;        /* submit-bid button, loading dot on detail */
+  --we-green-700: #207538;        /* progress fill, deep accents */
+  --we-green-header: #2f663c;     /* home header / hero canvas */
+  --we-green-tint: #e7f4e8;       /* OK footer background */
+  --we-green-tint-soft: #e5f3e5;
+  --we-green-tint-faint: #f2f9f2;
+  --we-green-tint-select: #eaf6ed; /* selected card background */
+
+  /* ---- Blue (links, secondary CTAs, info) ---- */
+  --we-blue-primary: #0066ff;     /* links, link-buttons, radio accent */
+  --we-blue-secondary: #2b55aa;   /* logo wedge, deep blue text */
+  --we-blue-400: #66a3ff;
+  --we-blue-tint: #e6f0ff;
+
+  /* ---- Red (unloading point, errors, reject, alerts) ---- */
+  --we-red-primary: #d33636;      /* unloading-point square, error text */
+  --we-red-secondary: #d9052c;    /* reject button, strong alert */
+  --we-red-tint: #ffeded;         /* alert footer background */
+  --we-red-tint-2: #ffe6eb;
+
+  /* ---- Yellow / gold (promo, yellow CTA, accept banner) ---- */
+  --we-yellow-primary: #f7c145;   /* yellow buttons */
+  --we-yellow-hero: #ffc74e;      /* welcome hero canvas */
+  --we-yellow-accent: #ffcc00;
+  --we-yellow-tint: #fdf3da;      /* progress-bar track band */
+  --we-yellow-tint-2: #fce53c;
+  --we-yellow-text: #a57e26;      /* accept banner text */
+  --we-yellow-text-deep: #7b5a0f;
+
+  /* ---- Orange ---- */
+  --we-orange-primary: #ed6d26;
+  --we-orange-tint: #fff7ed;
+
+  /* ---- Violet (bid / "thunder" pills, premium nudges) ---- */
+  --we-violet-primary: #734fea;   /* thunder pill text */
+  --we-violet-tint: #f8f5ff;      /* pill gradient start */
+  --we-violet-deep: #4a265e;      /* hero headline text */
+
+  /* ---- Neutrals ---- */
+  --we-black: #000000;
+  --we-white: #ffffff;
+  --we-ink: #131313;              /* wordmark / strong headings */
+  --we-gray-900: #222222;
+  --we-gray-800: #3a3a3a;
+  --we-gray-700: #444444;
+  --we-gray-600: #666666;         /* disabled text, captions */
+  --we-gray-500: #888888;         /* body-light, sub-headings */
+  --we-gray-400: #aaaaaa;         /* placeholders */
+  --we-gray-300: #cccccc;         /* disabled fill */
+  --we-gray-200: #d7d7d7;         /* hollow-button border */
+  --we-border: #eaedfa;           /* card border (default) */
+  --we-border-soft: #ebedf1;      /* dividers */
+  --we-border-line: #eeeeee;
+  --we-surface: #f4f5fa;          /* page background behind cards */
+  --we-surface-2: #faf9ff;
+  --we-surface-3: #f7faff;
+
+  /* ============================================================
+     Semantic aliases
+     ============================================================ */
+  --color-primary: var(--we-green-primary);
+  --color-primary-press: var(--we-green-600);
+  --color-link: var(--we-blue-primary);
+  --color-danger: var(--we-red-primary);
+  --color-danger-strong: var(--we-red-secondary);
+  --color-accent: var(--we-yellow-primary);
+  --color-premium: var(--we-violet-primary);
+
+  --text-strong: var(--we-black);
+  --text-heading: var(--we-ink);
+  --text-body: var(--we-black);
+  --text-muted: var(--we-gray-500);
+  --text-caption: var(--we-gray-600);
+  --text-placeholder: var(--we-gray-400);
+  --text-on-primary: var(--we-white);
+  --text-link: var(--we-blue-primary);
+
+  --surface-page: var(--we-surface);
+  --surface-card: var(--we-white);
+  --surface-header: var(--we-green-header);
+  --surface-ok: var(--we-green-tint);
+  --surface-alert: var(--we-red-tint);
+  --surface-accept: var(--we-surface);
+
+  --border-card: var(--we-border);
+  --border-divider: var(--we-border-soft);
+  --border-input: var(--we-gray-200);
+
+  /* loading / unloading point markers on the route ladder */
+  --point-loading: var(--we-green-primary);
+  --point-unloading: var(--we-red-primary);
+
+  /* premium / bid pill gradient */
+  --pill-premium-grad: linear-gradient(89.99deg, #f8f5ff 0.01%, #ffffff 99.99%); /* @kind color */
+}

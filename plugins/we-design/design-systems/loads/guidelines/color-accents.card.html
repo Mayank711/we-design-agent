@@ -1,0 +1,25 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Semantic accents" subtitle="Blue links, red alerts, gold promo, violet premium" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    body { margin: 0; padding: 20px; font-family: var(--font-display); background: #fff; }
+    .row { display: flex; gap: 12px; flex-wrap: wrap; }
+    .sw { width: 120px; }
+    .chip { height: 56px; border-radius: 8px; border: 1px solid rgba(0,0,0,0.06); }
+    .name { font-size: 12px; font-weight: 600; color: var(--text-body); margin-top: 6px; }
+    .hex { font-size: 11px; color: var(--text-muted); font-family: var(--font-secondary); }
+  </style>
+</head>
+<body>
+  <div class="row">
+    <div class="sw"><div class="chip" style="background:var(--we-blue-primary)"></div><div class="name">link / blue</div><div class="hex">#0066FF</div></div>
+    <div class="sw"><div class="chip" style="background:var(--we-red-primary)"></div><div class="name">danger</div><div class="hex">#D33636</div></div>
+    <div class="sw"><div class="chip" style="background:var(--we-yellow-primary)"></div><div class="name">accent / gold</div><div class="hex">#F7C145</div></div>
+    <div class="sw"><div class="chip" style="background:var(--we-orange-primary)"></div><div class="name">orange</div><div class="hex">#ED6D26</div></div>
+    <div class="sw"><div class="chip" style="background:var(--we-violet-primary)"></div><div class="name">premium</div><div class="hex">#734FEA</div></div>
+  </div>
+</body>
+</html>

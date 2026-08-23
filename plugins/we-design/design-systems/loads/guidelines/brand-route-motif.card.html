@@ -1,0 +1,25 @@
+<!-- @dsCard group="Brand" viewport="700x170" name="Route marker motif" subtitle="Green circle = loading, red square = unloading, dashed connector" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    body { margin: 0; padding: 28px; font-family: var(--font-display); background: #fff; }
+    .ladder { display: flex; flex-direction: column; gap: 14px; max-width: 320px; }
+    .stop { position: relative; padding-left: 24px; }
+    .dot { position: absolute; left: 0; top: 8px; width: 8px; height: 8px; }
+    .green { background: var(--point-loading); border-radius: 50%; }
+    .red { background: var(--point-unloading); }
+    .line { position: absolute; left: 3px; top: 18px; height: 30px; border-left: 1px dashed #000; }
+    .h { font-size: 20px; font-weight: 600; line-height: 1.5; }
+    .s { font-size: 14px; color: var(--text-muted); }
+  </style>
+</head>
+<body>
+  <div class="ladder">
+    <div class="stop"><span class="dot green"></span><span class="line"></span><div class="h">Jaipur, Rajasthan</div><div class="s">Loading point</div></div>
+    <div class="stop"><span class="dot red"></span><div class="h">Surat, Gujarat</div><div class="s">Unloading point</div></div>
+  </div>
+</body>
+</html>

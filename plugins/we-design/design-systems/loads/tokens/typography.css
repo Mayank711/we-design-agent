@@ -1,0 +1,36 @@
+/* ============================================================
+   WheelsEye Loads — Typography tokens
+   Baloo 2 = primary UI/display (rounded, friendly, high legibility for
+   semi-literate truck operators). Poppins = secondary, used for Hindi /
+   Devanagari script and premium "bid" pill copy.
+   ============================================================ */
+:root {
+  --font-display: 'Baloo 2', system-ui, sans-serif;   /* --font-baloo2 */
+  --font-body: 'Baloo 2', system-ui, sans-serif;
+  --font-secondary: 'Poppins', system-ui, sans-serif;  /* --font-poppins */
+
+  /* ---- Weights (Baloo 2 ranges 400–800) ---- */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+
+  /* ---- Type scale (mobile-first; px to match product values) ---- */
+  --text-display: 30px;   /* hero headline (lh 1.4) */
+  --text-h1: 24px;        /* card heading / address heading (lh 36px) */
+  --text-h2: 22px;        /* detail address (lh 36px) */
+  --text-h3: 20px;        /* list address heading (lh 30px) */
+  --text-title: 18px;     /* item rows, footer rate label, buttons (lh 24px) */
+  --text-rate: 24px;      /* fare amount (lh 32px) */
+  --text-body-lg: 16px;   /* body, base size (lh 24px) */
+  --text-body-sm: 14px;   /* sub-heading, captions (lh 22px) */
+  --text-caption: 12px;   /* fine print, chip labels */
+
+  /* ---- Line heights ---- */
+  --lh-display: 1.4; /* @kind other */
+  --lh-heading: 1.5;       /* @kind other */ /* 36px on 24px */
+  --lh-snug: 1.33; /* @kind other */
+  --lh-body: 1.5;          /* @kind other */ /* 24px on 16px */
+  --lh-tight: 1.2; /* @kind other */
+}

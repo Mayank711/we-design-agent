@@ -1,0 +1,28 @@
+{
+  "$comment": "Registry of all design systems the agent can build in. Add a product = drop its export into design-systems/<slug>/ and add an entry here. The agent resolves the ACTIVE system per request using the fields below (see docs/MULTI-SYSTEM.md).",
+  "version": 1,
+  "defaultSystem": null,
+  "systems": [
+    {
+      "slug": "loads",
+      "name": "WheelsEye Loads",
+      "aliases": ["loads", "load", "loads app", "load marketplace", "freight", "caraxes"],
+      "namespace": "WheelsEyeLoadsDesignSystem_985cfc",
+      "platform": "mobile",
+      "path": "design-systems/loads",
+      "manifest": "design-systems/loads/_ds_manifest.json",
+      "adherence": "design-systems/loads/_adherence.oxlintrc.json",
+      "sourceRepo": "caraxes/",
+      "sourcePathGlobs": ["caraxes/**"],
+      "domainVocab": ["POD", "lane", "bid", "rate card", "MXL", "SXL", "unloading point", "load"],
+      "figma": { "fileKey": "oYFh5Co8WmnSOGep3RTbvK", "role": "sandbox", "plan": "team::1461987403958832286" },
+      "status": "active"
+    },
+    { "slug": "operator", "name": "Operator App", "aliases": ["operator", "operator app"], "platform": "mobile", "path": "design-systems/operator", "status": "planned" },
+    { "slug": "consigner", "name": "Consigner App", "aliases": ["consigner", "consignor", "consigner app"], "platform": "mobile", "path": "design-systems/consigner", "status": "planned" },
+    { "slug": "hulk", "name": "Hulk App", "aliases": ["hulk", "hulk app"], "platform": "mobile", "path": "design-systems/hulk", "status": "planned" },
+    { "slug": "install", "name": "Install App", "aliases": ["install", "install app", "installer"], "platform": "mobile", "path": "design-systems/install", "status": "planned" },
+    { "slug": "vylo", "name": "Vylo App", "aliases": ["vylo", "vylo app"], "platform": "mobile", "path": "design-systems/vylo", "status": "planned" },
+    { "slug": "web", "name": "Web (placeholder)", "aliases": ["web", "website", "web app", "dashboard"], "platform": "web", "path": "design-systems/web", "status": "planned" }
+  ]
+}

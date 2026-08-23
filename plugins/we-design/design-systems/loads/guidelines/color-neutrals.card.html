@@ -1,0 +1,26 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Neutrals & surfaces" subtitle="Ink, body text, borders, page & card surfaces" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    body { margin: 0; padding: 20px; font-family: var(--font-display); background: #fff; }
+    .row { display: flex; gap: 12px; flex-wrap: wrap; }
+    .sw { width: 104px; }
+    .chip { height: 56px; border-radius: 8px; border: 1px solid rgba(0,0,0,0.08); }
+    .name { font-size: 12px; font-weight: 600; color: var(--text-body); margin-top: 6px; }
+    .hex { font-size: 11px; color: var(--text-muted); font-family: var(--font-secondary); }
+  </style>
+</head>
+<body>
+  <div class="row">
+    <div class="sw"><div class="chip" style="background:var(--we-ink)"></div><div class="name">ink</div><div class="hex">#131313</div></div>
+    <div class="sw"><div class="chip" style="background:var(--we-gray-500)"></div><div class="name">body-light</div><div class="hex">#888888</div></div>
+    <div class="sw"><div class="chip" style="background:var(--we-gray-300)"></div><div class="name">disabled</div><div class="hex">#CCCCCC</div></div>
+    <div class="sw"><div class="chip" style="background:var(--we-border)"></div><div class="name">border</div><div class="hex">#EAEDFA</div></div>
+    <div class="sw"><div class="chip" style="background:var(--we-surface)"></div><div class="name">page</div><div class="hex">#F4F5FA</div></div>
+    <div class="sw"><div class="chip" style="background:var(--we-white)"></div><div class="name">card</div><div class="hex">#FFFFFF</div></div>
+  </div>
+</body>
+</html>

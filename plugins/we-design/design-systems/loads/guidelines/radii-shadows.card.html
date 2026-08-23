@@ -1,0 +1,26 @@
+<!-- @dsCard group="Spacing" viewport="700x170" name="Radii & shadows" subtitle="12px cards/buttons, 24px sheets, 36px pills; soft elevation" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    body { margin: 0; padding: 24px; font-family: var(--font-display); background: var(--surface-page); }
+    .row { display: flex; gap: 24px; flex-wrap: wrap; align-items: flex-start; }
+    .box { background: #fff; width: 96px; height: 72px; display: flex; align-items: center; justify-content: center; }
+    .lab { font-size: 12px; font-weight: 600; margin-top: 8px; }
+    .sub { font-size: 11px; color: var(--text-muted); font-family: var(--font-secondary); }
+    .group { text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="row">
+    <div class="group"><div class="box" style="border-radius:var(--radius-sm);border:1px solid var(--border-card)"></div><div class="lab">sm · 6</div></div>
+    <div class="group"><div class="box" style="border-radius:var(--radius-lg);border:1px solid var(--border-card)"></div><div class="lab">lg · 12</div><div class="sub">cards · buttons</div></div>
+    <div class="group"><div class="box" style="border-radius:var(--radius-2xl);border:1px solid var(--border-card)"></div><div class="lab">2xl · 24</div><div class="sub">sheets</div></div>
+    <div class="group"><div class="box" style="border-radius:var(--radius-pill);width:120px;border:1px solid var(--border-card)"></div><div class="lab">pill · 36</div></div>
+    <div class="group"><div class="box" style="border-radius:var(--radius-lg);box-shadow:var(--shadow-card)"></div><div class="lab">card</div><div class="sub">0 2 10 / .08</div></div>
+    <div class="group"><div class="box" style="border-radius:var(--radius-lg);box-shadow:var(--shadow-rate)"></div><div class="lab">rate</div><div class="sub">0 2 20 / .25</div></div>
+  </div>
+</body>
+</html>

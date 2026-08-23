@@ -1,0 +1,73 @@
+<!-- @dsCard group="Components" viewport="900x760" name="Load card — production variants" subtitle="Quote / confirm / accept / bidding footers as shipped" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <style>
+    body { margin: 0; padding: 24px; background: var(--surface-page); font-family: var(--font-display); }
+    .wrap { display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-start; }
+    .col { width: 380px; }
+    .label { font-size: 12px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <div id="root" class="wrap"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="../../_ds_bundle.js"></script>
+  <script type="text/babel">
+    const { LoadListCard } = window.WheelsEyeLoadsDesignSystem_985cfc;
+    const A = '../../assets/icons/loads/';
+    const addr = [
+      { type: 'LOADING', heading: 'Jaipur, Rajasthan', subHeading: 'Sitapura Industrial Area' },
+      { type: 'UNLOADING', heading: 'Surat, Gujarat', subHeading: 'Sachin GIDC' },
+    ];
+    const baseItems = [
+      { iconSrc: A + 'truck-type.svg', desc: '32 ft Multi-axle · Full load' },
+      { iconSrc: A + 'measurement.svg', desc: '21 Tonnes · Cement' },
+    ];
+    function Demo() {
+      return (
+        <>
+          <div className="col">
+            <div className="label">Quote footer (OK)</div>
+            <LoadListCard
+              headerWidget={{ iconSrc: A + 'clock.svg', text: 'Closes in <b>04:32</b>' }}
+              addresses={addr}
+              items={[...baseItems, { iconSrc: A + 'magic.svg', desc: 'Earn 12% more on this lane', color: 'GREEN' }]}
+              footer={{ variant: 'quote', color: 'OK', desc: 'Expected price', amount: '₹48,000', buttonDesc: 'Send Quote' }}
+            />
+          </div>
+          <div className="col">
+            <div className="label">Confirm footer</div>
+            <LoadListCard
+              headerWidget={{ iconSrc: A + 'verified.svg', text: 'Verified shipper' }}
+              addresses={addr} items={baseItems}
+              stickyWidget={{ iconSrc: A + 'thunder.svg', desc: 'Bid higher to win this load' }}
+              footer={{ variant: 'confirm', desc: 'Pay token to confirm', amount: '₹2,000', buttonDesc: 'Confirm Load' }}
+            />
+          </div>
+          <div className="col">
+            <div className="label">Accept footer</div>
+            <LoadListCard addresses={addr} items={baseItems}
+              footer={{ variant: 'accept', buttonDesc: 'Accept Load' }} />
+          </div>
+          <div className="col">
+            <div className="label">Quote footer (RED) &amp; Bidding</div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+              <LoadListCard addresses={addr} items={[baseItems[0]]}
+                footer={{ variant: 'quote', color: 'RED', desc: 'Reduce your freight', amount: '₹52,000', buttonDesc: 'Reduce' }} />
+              <LoadListCard addresses={addr} items={[baseItems[0]]}
+                footer={{ variant: 'bidding', desc: 'Bidding closes in 02:00 min', buttonDesc: 'Place Bid', rejectDesc: 'Not interested' }} />
+            </div>
+          </div>
+        </>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+  </script>
+</body>
+</html>
