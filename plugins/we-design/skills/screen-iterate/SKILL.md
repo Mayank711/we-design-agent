@@ -62,9 +62,12 @@ header is NOT a concept. The theme must be carried through **every band of the s
 system, card surfaces, inner boxes, illustration/banner treatment, list rows, separators, link/button
 styles, footer, and bottom nav. Two hard sub-rules:
 1. **Baked raster art may only be reused in themes that match its baked palette.** Art with a baked
-   sky/background drags every other theme back to the original look — rebuild the same message
-   natively in the theme's language (typeset headline + simple glyphs), or re-crop/re-export art
-   that fits.
+   sky/background drags every other theme back to the original look. And **never redraw brand
+   illustrations by hand** — hand-drawn substitute glyphs next to crafted brand art read as
+   childish (user-flagged). Instead EXTRACT the art's elements from the source: per-node
+   `download_assets` (the lettering lockup usually exists as a single clean SVG → import as an
+   editable vector via `upload_assets`; illustrations export as PNG → chroma-key the baked
+   background out, preserving soft edges), then compose the real assets in the theme.
 2. Before calling a concept done, diff it against the base screen band-by-band and count the bands
    that actually changed — if most bands are untouched, it is a recolor, not a concept.
 
