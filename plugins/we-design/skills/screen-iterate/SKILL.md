@@ -12,6 +12,14 @@ specimens (the failure mode) produces a mock, not a dev-ready screen. **Fidelity
 
 **Never edit the source file.** Read it only. Build in the active system's file (a `Screens` page).
 
+**Foreign files are usually not even editable** — files the connector account doesn't own commonly
+refuse `use_figma` writes ("you'll need a Full seat"), while reads (`get_metadata`,
+`get_screenshot`, `get_variable_defs`, `download_assets`) still work. If the user asks to
+"duplicate the page and change it" inside such a file, do NOT stop: fulfil the intent as a
+**faithful in-sandbox duplicate** of the target frame(s) in a file we own (create one via
+`create_new_file` if the system has no sandbox yet), state the substitution explicitly, and use
+`download_assets` → `upload_assets` to carry raster/illustration fidelity across files.
+
 ## The non-negotiable sequence (skipping a phase is how details get dropped)
 
 ### Phase A — Ingest FAITHFULLY (read-only)

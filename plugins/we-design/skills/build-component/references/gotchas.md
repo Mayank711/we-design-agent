@@ -53,3 +53,25 @@ Every item here cost a real debugging cycle during the WheelsEye Loads build. Re
 - `await figma.setCurrentPageAsync(page)` **once per call**; never loop pages inside one script.
 - **Never parallelize `use_figma` calls** — mutations must be strictly sequential.
 - **Screenshot every component** (`get_screenshot` or `await node.screenshot()`) — structural success ≠ visual correctness (the vertical-text bug returned a clean success).
+
+## Fills & variable-bound paints (v0.7, BookTruck FTL home)
+- **`figma.createAutoLayout()` frames default to a SOLID WHITE fill** (same as `createFrame()`).
+  Every structural wrapper/row/stack that should be transparent MUST set `fills = []` explicitly,
+  or it silently masks the parent's band color (a whole sky-blue header rendered white because
+  full-width wrapper rows kept their default white fill). `createNodeFromSvg` wrapper frames can
+  carry a white fill too — clear those as well.
+- **Renders may show a bound paint's STATIC color, not the variable's value.** When binding with
+  `setBoundVariableForPaint`, always pass the variable's actual resolved color as the paint's
+  static `color` (belt and braces): `setBoundVariableForPaint({type:'SOLID', color: <real value>,
+  opacity}, 'color', variable)`. Never bind onto a placeholder white/black base color.
+- **Paints returned by `setBoundVariableForPaint` are frozen** — mutating `.opacity` on the
+  returned object fails silently (a 15%-opacity radar circle rendered fully opaque). Set `opacity`
+  on the INPUT paint object before binding.
+
+## Foreign-file access (v0.7)
+- Files not owned by the connector account may refuse ALL `use_figma` writes with
+  *"To use MCP tools that make edits, you'll need a Full seat"* — even when the same account can
+  edit files it created via `create_new_file`. Protocol: treat the foreign file as read-only
+  (metadata/screenshots/variables/assets), and do every build in a file we own. A requested
+  "duplicate the page" then becomes: faithful in-sandbox reproduction of the target frame(s),
+  with `download_assets` → `upload_assets` for raster/illustration fidelity.

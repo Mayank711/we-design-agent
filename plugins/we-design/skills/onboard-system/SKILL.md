@@ -20,6 +20,22 @@ edit-seat Figma plan key (see the target system's `figma.plan`, or ask).
   `design-systems/loads/`.) Accept a zip or a folder path.
 - A **slug** (e.g. `operator`). If omitted, derive from the manifest namespace and confirm.
 
+### Fallback: no code export, only a live Figma file (proven on BookTruck FTL, v0.7)
+When the product has no export yet but its designs live in a Figma file, onboard **from the file
+itself** instead of stopping:
+1. `get_variable_defs` on the product's main section/screen node(s) — this yields the real token
+   set (colors, spacing, radius, font ramp, effects) exactly as bound on canvas.
+2. Deduplicate aliases (legacy vs current collections, e.g. `Color/*` vs `Greys/*`) into one
+   canonical set; **flag** name/value oddities and canvas colors that appear on screens but are
+   missing from the token set (add them as Lane-2 exploratory tokens, e.g. `Accent/Sky`).
+3. Skip the classifier (step 2 below) — write the captured set to
+   `design-systems/<slug>/tokens.json` with `"source": "live-figma"` and register with
+   `manifest: null`, noting the code export + adherence lint as pending.
+4. Continue from step 4 (create the Figma sandbox file, build foundations from the captured set).
+   If the source file belongs to another team, it is typically **read-only for the agent** (Figma
+   Full-seat rule) — that's fine: reads and asset downloads still work, and all building happens
+   in our sandbox.
+
 ## Steps
 
 ### 1. Ingest & validate

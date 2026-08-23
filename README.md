@@ -37,7 +37,7 @@ plugins/we-design/
   docs/                PLAN, MULTI-SYSTEM architecture, SKILLS-CHANGELOG, inventories, handoffs
 ```
 
-## Status — v0.6.0
+## Status — v0.7.0
 
 Engine proven end-to-end on WheelsEye Loads: design-system export → Figma library
 (103 variables, 16 styles, 15 components + 13 icons) → production Home rebuilt faithfully

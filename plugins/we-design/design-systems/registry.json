@@ -15,7 +15,29 @@
       "sourceRepo": "caraxes/",
       "sourcePathGlobs": ["caraxes/**"],
       "domainVocab": ["POD", "lane", "bid", "rate card", "MXL", "SXL", "unloading point", "load"],
-      "figma": { "fileKey": "oYFh5Co8WmnSOGep3RTbvK", "role": "sandbox", "plan": "team::1461987403958832286" },
+      "figma": { "fileKey": "45IcfiT2cyfdgW9htADsPw", "role": "sandbox", "plan": "organization::1428303265668237504" },
+      "status": "active"
+    },
+    {
+      "slug": "booktruck-ftl",
+      "name": "BookTruck FTL (Full Truck Load)",
+      "aliases": ["booktruck", "ftl", "full truck", "full truck load", "booking flow", "book truck"],
+      "namespace": null,
+      "platform": "mobile",
+      "path": "design-systems/booktruck-ftl",
+      "manifest": null,
+      "adherence": null,
+      "sourceRepo": null,
+      "sourcePathGlobs": [],
+      "domainVocab": ["loading location", "via-point", "OD", "full truck", "part load", "re-book", "frequent trips", "PIN codes", "book any truck"],
+      "figma": {
+        "fileKey": "Y8mqUPBBDR7OF3XhP7Cgo2",
+        "role": "sandbox",
+        "plan": "organization::1428303265668237504",
+        "sourceOfTruth": { "fileKey": "aBEY8fyww5wwaFJrbuItTN", "name": "Booking Flow V3", "access": "read-only via MCP (Full-seat required for edits)" }
+      },
+      "tokensSource": "live-figma",
+      "$note": "Onboarded WITHOUT a code export: tokens captured from the live Booking Flow V3 Figma file via get_variable_defs (DM Sans ux_copy ramp, Greys/Accent/Status colors, spacing/radius/iconSize scales, card elevation). Distinct product from loads (PTL). Code-export + adherence lint pending.",
       "status": "active"
     },
     { "slug": "operator", "name": "Operator App", "aliases": ["operator", "operator app"], "platform": "mobile", "path": "design-systems/operator", "status": "planned" },

@@ -2,6 +2,27 @@
 
 How the plugin's skill set evolved, and why. Newest first.
 
+## v0.7 — Second product onboarded (BookTruck FTL) + rendering gotchas
+- **`/onboard-system`**: new **live-Figma fallback** — when a product has no code export, capture
+  tokens from its Figma file via `get_variable_defs`, dedupe alias collections, flag canvas colors
+  missing from the token set, and build foundations in a sandbox we own. Proven end-to-end on
+  BookTruck FTL (Booking Flow V3) in one session: 43 variables + 9 text styles + faithful home
+  duplicate + dev-ready redesign.
+- **`/screen-iterate`**: new **foreign-file protocol** — files the connector account doesn't own
+  refuse MCP edits (Figma Full-seat rule) even with an org Dev seat. "Duplicate the page and edit
+  it" requests on such files are fulfilled as a faithful in-sandbox duplicate (state the
+  substitution), with `download_assets` -> `upload_assets` carrying illustration fidelity.
+- **`gotchas.md`** (3 new, all hit in this build):
+  1. `createAutoLayout()` defaults to a **solid white fill** — transparent wrappers must set
+     `fills = []`, or they mask parent band colors (sky header rendered white).
+  2. Renders can show a bound paint's **static** color — always pass the variable's real value as
+     the paint's static color when binding (never bind onto a placeholder white).
+  3. Paints returned by `setBoundVariableForPaint` are **frozen** — set `opacity` on the input
+     paint, not the returned one (radar circle rendered opaque).
+- **Why:** first onboarding of a second product exercised the multi-system promise and surfaced
+  the no-export and no-edit-permission realities; each miss became a mechanical rule, same as
+  v0.3–v0.6.
+
 ## v0.6 — Background-structure fidelity (user-flagged, second Home miss)
 - **`/screen-iterate` Phase A**: the Screen Inventory must now include the **background structure** —
   a left-margin pixel scan recording every background band (header/panel colours, boundaries,
