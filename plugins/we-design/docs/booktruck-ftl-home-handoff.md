@@ -80,3 +80,16 @@ only in the two reference frames):
 New skill rule candidate (encoded in /screen-iterate future edits): **a theme concept must restyle
 every band of the screen — background system, cards, illustration/banner treatment, list rows,
 footer, and nav — and baked raster art may only be reused in themes that match its baked palette.**
+
+### Promo art upgrade (user-flagged: hand-drawn glyphs looked childish)
+
+The native-SVG truck/cloud glyphs were replaced with the ORIGINAL brand art, extracted from the
+source banner as standalone assets:
+- `Asset / 30-mins lockup (vector)` — the "BOOK TRUCKS IN 30 MINS" lettering, imported as an
+  editable vector from the source's own SVG (no sky, recolorable).
+- `Asset / art-truck (transparent)` / `art-cloud (transparent)` — the illustrated truck and cloud,
+  chroma-keyed (sky removed, motion blur preserved) from 4x exports.
+Concept A's gradient hero and Concept C's dark promo card now compose these real assets. Rule
+refinement for /screen-iterate: when baked art clashes with a theme, EXTRACT its elements
+(per-node export → key/vectorize) rather than redrawing brand illustrations by hand — hand-drawn
+substitutes for crafted brand art read as childish.
