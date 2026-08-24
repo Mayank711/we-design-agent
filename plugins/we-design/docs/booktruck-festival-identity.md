@@ -47,3 +47,47 @@ maroon #7A1F1F · rakhi red #C23333 · gold #E8B923 · saffron wash #FEF3D9→#F
   elements are restrained geometry (threads/beads/arcs), not hand-drawn illustration.
 - R4 initially covered the "B" of the wordmark — caught in self-review, band moved to wrap the
   plate end (readability is a hard gate for any wordmark treatment).
+
+---
+
+# Janmashtami exploration (2026-08-24) — the system's second festival
+
+Same page (`Festival Identity`, `31:2`), below the Raksha Bandhan set. This round formalized the
+**repeatable flow**, documented on-canvas in "The repeatable flow" card (`37:3`) so PMs can run it.
+
+## The repeatable flow (how every festival onboards)
+
+1. **Motif study** — pick 2–3 authentic symbols + a 3–4 colour Lane-2 palette (premium tones, never neon).
+2. **Fill the five treatment SLOTS** — composition never changes, only slot content:
+   ① UNDERLINE (under the plate) · ② COMPANION (beside/behind the mark) · ③ CORNER SLOT (swappable
+   medallion) · ④ CANVAS (background wash) · ⑤ NARRATIVE (one story gesture over the mark).
+3. **Icon proof** — every concept as iOS + Android icons, judged at 48px.
+4. **Lockup state** — the chosen underline slips into L1 for the festival window.
+5. **Recommend + gate** — icon + in-app pick, wordmark-readability & mark-untouched checks,
+   revert = remove slot content.
+
+## Janmashtami slot fills
+
+| Node | Concept | Slot | Motif |
+|---|---|---|---|
+| `38:2` | **J1 — Feather Underline** | ① | flowing teal line ending in a morpankh eye |
+| `38:22` | **J2 — Morpankh Companion** | ② | peacock feather tucked behind the mark's top-right (as in Krishna's crown) |
+| `38:44` | **J3 — Matki Festival Slot ★** | ③ | midnight disc + butter-topped matki — same disc as R3, new medallion (system proof) |
+| `39:2` | **J4 — Bansuri Rest** | plate | golden flute leaning at the plate end (R4's anchor point) |
+| `39:32` | **J5 — Midnight Canvas** | ④ | midnight-blue birth-hour sky + faint gold stars; logo untouched and glowing |
+| `39:64` | **J6 — Dahi Handi** | ⑤ | rope across the top corners, butter-pot hanging above the mark — "however high it hangs, we reach it" |
+
+Lockup Janmashtami state: `41:2`. Recommendation: `41:15` —
+**1st J3** (system continuity, instant revert) · **2nd J5** (most striking, zero-shape) ·
+**3rd J2** (most emotionally Krishna; marketing). Ship: J3 icon + J5 splash + J1 in-app header.
+
+## Janmashtami Lane-2 palette
+
+peacock teal #128E82 · Krishna navy #1E3A8A · midnight #14213D→#0F1B38 · gold #E8B923 (shared) ·
+terracotta #B5542D · butter cream #FFF3D6.
+
+## New process gotcha (encoded)
+
+Inline `node.screenshot()` inside a `use_figma` call can render **image fills as blank** (fresh
+headless client hasn't fetched them yet) — it made all six concept icons look empty. Verify
+image-heavy nodes with server-side `get_screenshot` instead.

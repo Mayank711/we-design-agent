@@ -75,3 +75,10 @@ Every item here cost a real debugging cycle during the WheelsEye Loads build. Re
   (metadata/screenshots/variables/assets), and do every build in a file we own. A requested
   "duplicate the page" then becomes: faithful in-sandbox reproduction of the target frame(s),
   with `download_assets` → `upload_assets` for raster/illustration fidelity.
+
+## Screenshot verification of image fills (v0.7.2)
+- **Inline `await node.screenshot()` can render IMAGE fills as blank** — each `use_figma` call runs
+  a fresh headless client that may not have fetched the image bytes yet, so freshly-referenced
+  image-fill frames show empty while vectors/text render fine (looked like "all icons missing").
+  For any node containing image fills, verify with the server-side `get_screenshot` tool instead;
+  trust inline screenshots only for pure vector/text output.
