@@ -23,6 +23,7 @@ the flexible layers: canvas, "Book Trucks" plate, and a reserved festival slot.
 | `33:2` | **R4 — Thread-tied Plate** | rakhi band wrapped around the plate's left end, knot bead |
 | `33:24` | **R5 — Festive Canvas** | cream→saffron wash + hairline gold inner ring; logo untouched |
 | `33:40` | **R6 — Raksha Arc** | one gold protective arc over the mark, tied with two red knots ("we shield every load") |
+| `45:2` | **R7 — Centre-Medallion Rakhi** (added after user review) | full rakhi anatomy under the wordmark: thread flowing out BOTH sides of a centred maroon-gold rosette — an end-of-thread medallion reads as a tag, not a rakhi. Plate lifted 6px for breathing room. Supersedes R1 as the literal-rakhi pick; recommendation card updated (R7 now 2nd, R1 minimal fallback). |
 
 Lockups (`34:2`): L1 horizontal (mark + plate + "a Wheelseye product"), L2 stacked splash,
 L3 festival state of L1 (thread appears for the festival window, then disappears) — designed to
@@ -36,6 +37,13 @@ separate BookTruck from the FASTag/GPS Wheelseye app.
 3. **R2 Medallion Halo** — most festive for marketing creatives.
 
 Ship suggestion: R3 on the icon + R1 in-app, driven from one festival token file; R5 as splash backdrop.
+
+## Design rule learned (R7)
+
+**Festival symbols must keep their real-world anatomy.** A rakhi is a centred medallion with thread
+on BOTH sides; moving the medallion to the thread's end made it read as a luggage tag. When
+abstracting a cultural object, preserve the geometry people recognise (centre of symmetry,
+proportions), and simplify only the detailing.
 
 ## Lane-2 palette (exploratory, for designer adoption as `festival/*` tokens)
 
