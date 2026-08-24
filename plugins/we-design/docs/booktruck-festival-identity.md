@@ -99,3 +99,19 @@ terracotta #B5542D · butter cream #FFF3D6.
 Inline `node.screenshot()` inside a `use_figma` call can render **image fills as blank** (fresh
 headless client hasn't fetched them yet) — it made all six concept icons look empty. Verify
 image-heavy nodes with server-side `get_screenshot` instead.
+
+## Device-test fix: Android adaptive icons (user-flagged tiny icon)
+
+On-device the legacy square PNG rendered as a tiny logo inside a big white circle. Root cause is
+two paddings compounding: (1) the legacy icon already carries internal margins, and (2) Android 8+
+launchers wrap legacy icons in an adaptive white disc and scale them to ~65%. Fix shipped as
+`booktruck-adaptive-icons.zip`: per variant, a full-bleed BACKGROUND layer + a FOREGROUND layer
+composed for the 66dp safe zone (432px @4x masters, Icon Exports page `49:*`), plus
+`mipmap-anydpi-v26/ic_launcher.xml` wiring; J5 uses the midnight-stars gradient as its background
+layer. Legacy PNGs from the first pack remain the API<26 fallback.
+
+Rules encoded:
+- **App icons must ship as adaptive layers** (bg + fg sized to the 66dp safe zone), never as a
+  padded square PNG alone; always preview by compositing fg over bg and cropping the 72dp circle.
+- **Transparent-frame exports can bake the Figma canvas color (#F5F5F5)** — verify corner alpha on
+  every "transparent" export and flood-key edge-connected canvas grey if present.
