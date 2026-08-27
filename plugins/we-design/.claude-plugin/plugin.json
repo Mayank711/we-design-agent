@@ -1,6 +1,6 @@
 {
   "name": "we-design",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Figma design agent for WheelsEye products — lets PMs and developers go from data, a hunch, or an existing screen to on-brand, DEV-READY Figma designs built only from the product's design system. Multi-product registry (Loads + BookTruck FTL active; Operator, Consigner, Hulk, Install, Vylo, web onboardable). 4 skills: /onboard-system (import a design-system export → auto-build Figma variable/style foundations), /build-component (code component → variable-bound Figma variant set), /screen-iterate (existing screen → faithful reproduction → change → dev-ready), /design-review (guardrail gate: adherence lint, dev-ready checklist, 3-lane compose/explore/adopt rule). Requires the Figma MCP connector with an edit-capable seat.",
   "author": {
     "name": "WheelsEye Mobile Platform Team",
